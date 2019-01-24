@@ -3,7 +3,7 @@
 # General Basics
 
 ## 1. Git Basics
--I have taught github a bit to this but not quite. Here I repeated the basics and also learned some new commands such as.
+- Here I repeated the basics and also learned some new commands such as.
 - `git diff`
 - `git log --graph --oneline`
 - I liked it)
