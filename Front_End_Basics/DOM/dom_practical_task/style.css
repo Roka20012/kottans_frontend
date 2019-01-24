@@ -1,0 +1,76 @@
+body {
+    margin: 0;
+    padding: 0;
+    color: white;
+    background-color: #888;
+    background-image: url(images/background.jpg);
+    background-repeat: no-repeat;
+    background-size: 2000px 1300px;
+    font-family: BlinkMacSystemFont, -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
+}
+
+
+nav {
+    top: 60px;
+    position: relative;
+    text-align: center;
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+}
+
+.data-text {
+    position: relative;
+    top: 45px;
+    width: 1000px;
+    font-size: 16px;
+    line-height: 22px;
+    font-family: sans-serif;
+}
+
+h1 {
+    font-size: 45px;
+    text-align: center;
+}
+
+.container {
+    position: absolute;
+    width: 100%;
+    height: 600px;
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-around;
+}
+
+a {
+	top: 10px;
+    height: 30px;
+    position: relative;
+    display: inline-block;
+    background-color: #454545FF;
+    color: white;
+    font-weight: 700;
+    text-decoration: none;
+    user-select: none;
+    padding: 1em 2em 0.5em 2em;
+    outline: none;
+    border: 1px solid;
+    border-radius: 1px;
+    transition: all ease 0.2s;
+}
+
+a:hover {
+    background: #888;
+    cursor: pointer;
+}
+
+a:active {
+	opacity: 0;
+    transform: scale(0.4);
+    background: #C0C0C0FF;
+}
+
+.check {
+	background-color: #888;
+}
