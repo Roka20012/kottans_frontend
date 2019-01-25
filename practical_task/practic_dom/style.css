@@ -9,9 +9,14 @@ body {
     font-family: BlinkMacSystemFont, -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
 }
 
+::-webkit-scrollbar {
+    display: none;
+}
 
 nav {
-    top: 60px;
+    margin-right: 25px;
+    margin-left: 0px;
+    top: 55px;
     position: relative;
     text-align: center;
     width: 200px;
@@ -29,6 +34,8 @@ nav {
 }
 
 h1 {
+    position: relative;
+    top: 30px;
     font-size: 45px;
     text-align: center;
 }
@@ -44,7 +51,8 @@ h1 {
 }
 
 a {
-	top: 10px;
+    margin-bottom: 3px;
+    top: 10px;
     height: 30px;
     position: relative;
     display: inline-block;
@@ -63,14 +71,116 @@ a {
 a:hover {
     background: #888;
     cursor: pointer;
+    box-shadow: -5px 5px 50px 20px #888;
+    border-right: 10px solid;
+    border-left: 10px solid;
+    z-index: 1;
 }
 
 a:active {
-	opacity: 0;
-    transform: scale(0.4);
-    background: #C0C0C0FF;
+    z-index: 1;
+    /*transition: all ease 0.2s;*/
+    /*margin-right: -20px;*/
+    border-right: 10px solid;
+    border-left: 10px solid;
+    box-shadow: -5px 5px 50px 20px #888;
+    /*transform: scale(1.1); #C0C0C0FF*/
+    background: #D52940FF;
 }
 
-.check {
-	background-color: #888;
+a::before {
+    top: 50px;
+    left: 40px;
+    position: relative;
+    content: "";
+    width: 100px;
+    height: 100px;
+    background-color: red;
 }
+
+a::after {
+    position: relative;
+    content: "";
+    width: 100px;
+    height: 100px;
+    background-color: red;
+}
+
+
+
+@media screen and (max-width: 1000px) {
+
+    nav {
+        z-index: 1;
+        height: 300px;
+        width: 150px;
+        top: 0px;
+        padding: 400px 10px 100% 10px;
+        position: fixed;
+        margin-left: -170px;
+        transition: all ease .2s;
+        background-color: #454545FF;
+        left: 0px;
+    }
+
+    a {
+        top: -200px;
+        left: 0px;
+    }
+
+    .data-text {
+        margin-top: -15px;
+        margin-left: 20px;
+        margin-right: 10px;
+    }
+
+    .burger {
+        position: absolute;
+        z-index: 3;
+        /*        background-color: red;*/
+        width: 40px;
+        height: 25px;
+        top: 35px;
+        left: 25px;
+    }
+
+    .burger:hover {
+        cursor: pointer;
+    }
+
+    .burger1 {
+        /* box-shadow: 0px 10px 0px 20px #888 ;*/
+        z-index: 2;
+        border-radius: 20px;
+        position: absolute;
+        top: 35px;
+        left: 25px;
+        width: 40px;
+        height: 5px;
+        background-color: orange;
+    }
+
+    .burger2 {
+        z-index: 2;
+        border-radius: 20px;
+        position: absolute;
+        top: 45px;
+        left: 25px;
+        width: 40px;
+        height: 5px;
+        background-color: orange;
+    }
+
+    .burger3 {
+        z-index: 2;
+        border-radius: 20px;
+        position: absolute;
+        top: 55px;
+        left: 25px;
+        width: 40px;
+        height: 5px;
+        background-color: orange;
+    }
+}
+
+
