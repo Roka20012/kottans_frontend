@@ -53,8 +53,8 @@
 ![DOM](Front_End_Basics/DOM/DOM_Udacity.png)
 ![freeCodeJS](Front_End_Basics/DOM/JS_freecode_camp.png)
 ### DOM-practical-task
-[Demo](https://roka20012.github.io/)|
-[Code base](https://github.com/Roka20012/Roka20012.github.io)
+[Demo](https://roka20012.github.io/dom_practical_task/)| 
+[Code base](https://github.com/Roka20012/kottans_frontend/tree/master/practical_task/practic_dom)
 
 
 
