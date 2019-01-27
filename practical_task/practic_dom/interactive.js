@@ -44,7 +44,8 @@ function hideBurgerMenu() {
     let width = window.innerWidth ||
         document.documentElement.clientWidth ||
         document.body.clientWidth;
-    if (width < 900) {
+    let maxWidth = 900;
+    if (width < maxWidth) {
         nav.classList.toggle("menu-open");
         nav.classList.toggle("menu-close");
         burger.classList.toggle("open");
@@ -59,7 +60,7 @@ function hideBurgerMenu() {
 function setMark(target) {
     let a = Array.from(nav.children);
 
-    a.forEach((el, i) => {
+    a.forEach((el) => {
         el.classList.remove("check");
     });
     target.classList.add("check");
@@ -76,7 +77,6 @@ function showText(index) {
     textChild.forEach((el) => {
         el.id = "";
     });
-
     textChild[index].id = "animeText";
 }
 
