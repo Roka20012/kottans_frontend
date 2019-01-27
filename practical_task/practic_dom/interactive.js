@@ -32,7 +32,7 @@ let stories = {
 };
 
 
-let nav = document.getElementsByTagName("nav")[0];
+let nav = document.getElementById("navbar");
 let text = document.getElementById("text");
 let burger = document.getElementsByClassName("burger2")[0];
 
@@ -87,8 +87,7 @@ function showText(index) {
  * author: Rostyk Broslavsky
  * email: broslavsky.rostislaw@gmail.com
  */
-function checkStory(e) {
-    let target = e.target;
+function checkStory({ target }) {
 
     if (target.tagName == "A") {
         for (let i = 0; i < nav.children.length; i++) {
