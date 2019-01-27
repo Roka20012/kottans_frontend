@@ -32,10 +32,11 @@ let stories = {
 
 let nav = document.getElementsByTagName("nav")[0];
 let text = document.getElementById("text");
+let burger = document.getElementsByClassName("burger2")[0];
 
 /**
  * закриває меню якщо ми натискаємо на пункт меню 
- * коли ширина екрана менша 1000px
+ * коли ширина екрана менша 900px
  * author: Rostyk Broslavsky
  * email: broslavsky.rostislaw@gmail.com
  */
@@ -43,9 +44,10 @@ function hideBurgerMenu() {
     let width = window.innerWidth ||
         document.documentElement.clientWidth ||
         document.body.clientWidth;
-    if (width < 1000) {
+    if (width < 900) {
         nav.classList.toggle("menu-open");
         nav.classList.toggle("menu-close");
+        burger.classList.toggle("open");
     }
 }
 
@@ -59,8 +61,8 @@ function setMark(target) {
 
     a.forEach((el, i) => {
         el.classList.remove("check");
-        target.classList.add("check");
     });
+    target.classList.add("check");
 }
 
 /**
@@ -71,7 +73,7 @@ function setMark(target) {
 function showText(index) {
     let textChild = Array.from(text.children);
 
-    textChild.forEach((el, index) => {
+    textChild.forEach((el) => {
         el.id = "";
     });
 
@@ -110,6 +112,7 @@ nav.addEventListener("click", checkStory);
 function hideOpenBurgerMenu(e) {
     nav.classList.toggle("menu-open");
     nav.classList.toggle("menu-close");
+    burger.classList.toggle("open");
 }
 
 let burgerButton = document.getElementsByClassName("burger")[0];
