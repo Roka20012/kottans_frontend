@@ -126,31 +126,28 @@ body {
     background-color: #D52940FF;
 }
 
-@media screen and (max-width: 1000px) {
-    .menu-close {
-        z-index: 1;
-        height: 300px;
-        width: 150px;
-        top: -30px;
-        padding: 400px 10px 100% 10px;
-        position: fixed;
-        margin-left: -170px;
-        transition: all ease .2s;
-        background-color: #454545FF;
-        left: 0px;
-    }
+@media screen and (max-width: 900px) {
 
+    .menu-close,
     .menu-open {
         z-index: 1;
         height: 300px;
-        width: 50%;
         top: -30px;
+        left: 0px;
         padding: 400px 0px 100% 0px;
         position: fixed;
-        margin-left: 0px;
         transition: all ease .2s;
         background-color: #454545FF;
-        left: 0px;
+    }
+
+    .menu-close {
+        width: 150px;
+        margin-left: -170px;
+    }
+
+    .menu-open {
+        width: 50%;
+        margin-left: 0px;
     }
 
     #navbar a {
@@ -166,6 +163,7 @@ body {
     }
 
     .burger {
+        transition: all ease .2s;
         position: absolute;
         z-index: 3;
         width: 40px;
@@ -190,6 +188,7 @@ body {
     }
 
     .burger2 {
+        transition: all ease .2s;
         z-index: 2;
         border-radius: 20px;
         position: absolute;
@@ -210,9 +209,17 @@ body {
         height: 5px;
         background-color: orange;
     }
+
+    .open {
+        left: 15px;
+        background-color: white;
+        width: 60px;
+    }
+
 }
 
 #me {
+    height: 0px;
     opacity: .2;
     font-size: 12px;
     position: absolute;
@@ -220,8 +227,11 @@ body {
     top: 0px;
 }
 
+#me:hover {
+    opacity: .8;
+}
+
 a[href="https://github.com/Roka20012"] {
     color: white;
     text-decoration: none;
 }
-
