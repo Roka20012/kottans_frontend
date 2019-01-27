@@ -1,3 +1,5 @@
+"use strict";
+
 let stories = {
     2: `<p><span><strong>Storie 2.</strong> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit similique molestiae eligendi laudantium minus consequatur repellat ipsa, nemo repudiandae perspiciatis, magni aut temporibus nam ipsum expedita aperiam laboriosam quia, sapiente.</span>
 				<span>Hic  nemo quia odio quo numquam cum praesentium quis dolor impedit amet porro aut eos eaque dolore esse incidunt quos, voluptas doloremque eveniet blanditiis! Earum doloremque temporibus cupiditate laboriosam.</span>
