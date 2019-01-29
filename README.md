@@ -56,5 +56,9 @@
 [Demo](https://roka20012.github.io/dom_practical_task/)| 
 [Code base](https://github.com/Roka20012/kottans_frontend/tree/master/practical_task/practic_dom)
 
+## a-tiny-JS-world
+[Demo](https://roka20012.github.io/a-tiny-JS-world/)
+[Code base](https://github.com/Roka20012/kottans_frontend/tree/master/practical_task/a-tiny-JS-world)
+
 
 
