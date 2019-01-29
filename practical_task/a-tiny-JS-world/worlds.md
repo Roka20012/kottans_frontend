@@ -45,5 +45,6 @@
  2019-01-10 |    4    |     54     |  [webdevagent](https://github.com/webdevagent/a-tiny-JS-world)
  2019-01-10 |    4    |     72     | [mfialko](https://github.com/mfialko/a-tiny-JS-world)
  2019-01-24 |    4    |     45      | [mxmgny](https://github.com/mxmgny/a-tiny-JS-world)
+ 2019-01-24 |    4    |     45     | [Roka20012](https://roka20012.github.io/a-tiny-JS-world/)
  
 
