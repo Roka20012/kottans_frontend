@@ -59,6 +59,14 @@
 ## a-tiny-JS-world
 [Demo](https://roka20012.github.io/a-tiny-JS-world/)
 [Code base](https://github.com/Roka20012/kottans_frontend/tree/master/practical_task/a-tiny-JS-world)
+## js-oop
+I reached 6 kuy in codewars before))
+![Udacity js-oop](https://github.com/Roka20012/kottans_frontend/blob/master/practical_task/js-oop/js_oop_udacity.png)
+![Codewars](https://github.com/Roka20012/kottans_frontend/blob/master/practical_task/js-oop/js_oop_codewars.png)
+
+[#]practical-task
+[Demo](https://roka20012.github.io/js-oop/)
+[Code base](https://github.com/Roka20012/kottans_frontend/tree/master/practical_task/js-oop)
 
 
 
