@@ -72,6 +72,10 @@ practical-task
 [Demo](https://roka20012.github.io/a-tiny-JS-world/)
 [Code base](https://github.com/Roka20012/kottans_frontend/blob/master/practical_task/a-tiny-JS-world/index.js)
 
+## memory-pair-game
+[Demo](https://roka20012.github.io/memory-pair-game/)
+[Code base](https://github.com/Roka20012/kottans_frontend/tree/master/practical_task/memory-pair-game)
+
 
 
 
