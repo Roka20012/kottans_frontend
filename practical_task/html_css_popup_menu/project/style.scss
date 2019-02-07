@@ -1,6 +1,6 @@
 .container {
-    width: 220px;
-    height: 304px;
+    width: 266px;
+    height: 411px;
     position: absolute;
     display: grid;
     right: 70px;
@@ -9,54 +9,52 @@
 
 .sprite-container {
     position: relative;
-    margin: auto;
-    padding: 22px;
-    padding-top: 10px;
-    top: 40px;
+    padding: 10px;
+    top: 0px;
     width: 220px;
     height: 304px;
     display: none;
-    // display: grid;
     background-color: #fff;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 76px 76px 76px;
+}
+
+.container-menu {
+    height: 360px;
+    width: 220px;
+    position: absolute;
+    padding: 10px 30px 0px 10px;
+    top: 40px;
     border: 1px solid #CCCCCCFF;
     box-shadow: 0px 0px 10px -2px black;
-    overflow-y: scroll;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    display: none;
 }
 
-.check:checked ~ .mark {
-    margin-left: 53%;
-    position: absolute;
-    content: "";
-    width: 15px;
-    height: 15px;
-    z-index: 1;
-    top: 32px;
-    overflow: visible;
-    left: 48px;
-    background-color: white;
+.mark {
     border-left: 1px solid #CCCCCCFF;
     border-top: 1px solid #CCCCCCFF;
+    clip-path: polygon(100% 0%, 0% 100%, 0% 0%);
+    position: absolute;
+    content: "";
+    text-align: center;
+    width: 19px;
+    height: 19px;
     transform: rotate(45deg);
+    right: 48px;
+    top: 31px;
+    display: none;
+    z-index: 2;
+    background-color: white;
 }
-
-// .sprite-container::before {
-//     position: absolute;
-//     content: "";
-//     text-align: center;
-//     width: 247px;
-//     height: 30px;
-//     bottom: 0px;
-//     background-color: red;
-// }
 
 .check {
     display: none;
     position: relative;
 }
 
-.check:checked ~ .sprite-container, .check:checked ~ .hide-label {
+.check:checked ~ .container-menu .sprite-container,.check:checked ~ .mark ,.check:checked ~ .container-menu .hide-label, .check:checked ~ .container-menu {
     display: grid;
 }
 
@@ -103,12 +101,13 @@ a:hover {
     user-select: none;
     position: absolute;
     display: grid;
-    width: 267px;
+    width: 263px;
     height: 30px;
+    left: 1px;
     box-shadow: 0px 0px 0px 1px #E5E5E5FF;
     padding-top: 10px;
     text-align: center;
-    top: 377px;
+    top: 329px;
     background-color: #E5E5E5FF;
 
 }
@@ -117,22 +116,26 @@ a:hover {
     display: none;
 }
 
-#check-show-more:checked ~ label > .show-text {
+#check-show-more:checked ~ .container-menu label > .show-text {
     display: none;
 }
 
+.hide-text:hover {
+    text-decoration: underline;
+}
 
-#check-show-more:checked ~ label > .hide-text {
-    top: 427px;
+#check-show-more:checked ~ .container-menu label > .hide-text {
+    top: 560px;
     display: grid;
+    background-color: #fff;
 }
 
 #check-show-more {
     display: none;
 }
 
-#check-show-more:checked ~ .sprite-container {
-    height: 355px;
+#check-show-more:checked ~ .container-menu {
+    height: 385px;
     overflow-y: scroll;
     overflow-x: hidden;
 }
@@ -141,11 +144,9 @@ a:hover {
     display: none;
 }
 
-#check-show-more:checked ~ .sprite-container .hide {
+#check-show-more:checked ~ .container-menu .sprite-container .hide {
     display: grid;
 }
-
-
 
 .sprite1 {
     width: 40px;
@@ -230,4 +231,3 @@ a:hover {
     @extend .sprite1;
     background-position-y: -485px;
 }
-
