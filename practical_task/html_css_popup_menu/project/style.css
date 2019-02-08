@@ -7,6 +7,11 @@
   top: 20px;
 }
 
+.check-container {
+  width: 0px;
+  height: 0px;
+}
+
 .sprite-container {
   position: relative;
   padding: 10px;
@@ -54,7 +59,9 @@
   position: relative;
 }
 
-.check:checked ~ .container-menu .sprite-container, .check:checked ~ .mark, .check:checked ~ .container-menu .hide-label, .check:checked ~ .container-menu {
+.check:checked ~ .container-menu .sprite-container,
+.check:checked ~ .mark, .check:checked ~ .container-menu .hide-label,
+.check:checked ~ .container-menu {
   display: grid;
 }
 
@@ -147,7 +154,8 @@ a:hover {
   display: grid;
 }
 
-.sprite1, .sprite2, .sprite3, .sprite4, .sprite5, .sprite6, .sprite7, .sprite8, .sprite9, .sprite10, .sprite11, .sprite12, .sprite13, .sprite14, .sprite15 {
+.sprite1, .sprite2, .sprite3, .sprite4, .sprite5, .sprite6, .sprite7, .sprite8,
+.sprite9, .sprite10, .sprite11, .sprite12, .sprite13, .sprite14, .sprite15 {
   width: 40px;
   height: 40px;
   position: relative;
