@@ -9,6 +9,7 @@ let flipper = document.querySelector(".flipper");
 let allCards = document.querySelectorAll(".flipper > div");
 
 document.querySelector(".flipper ~ img").addEventListener("load",() => {
+    changeCards();
     showCards();
 });
 
@@ -24,23 +25,6 @@ function showCards() {
             el.classList.toggle("check");
         });
     }, delay * 4);
-}
-
-function addCards() {
-    let cards = [];
-    cards = cards.concat(shuffleCards(), shuffleCards());
-    let fragment = document.createDocumentFragment();
-
-    cards.forEach((el, i) => {
-        let div = document.createElement("div");
-        let img = document.createElement("img");
-        img.setAttribute("draggable", false);
-        img.src = el;
-        div.appendChild(img);
-        fragment.appendChild(div);
-    });
-
-    flipper.appendChild(fragment);
 }
 
 function changeCards() {
