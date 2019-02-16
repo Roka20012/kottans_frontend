@@ -159,12 +159,6 @@
   box-shadow: 0px 0px 1px 1px #A8C9FEFF;
 }
 
-.check {
-  width: 16px;
-  height: 16px;
-  background-color: red;
-}
-
 .visually-hidden {
   position: absolute;
   overflow: hidden;
@@ -184,19 +178,31 @@
   cursor: pointer;
   display: flex;
   position: absolute;
-  background-image: url(icon.png) no-repeat;
-  background-size: cover;
+}
+
+.icon-menu {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 16px;
+  height: 16px;
 }
 
 .checkbox-label-wrapper:hover {
   text-decoration: underline;
 }
 
-.checkbox-label {
-  position: absolute;
-  left: 200px;
+.checkbox-label, .checkbox-label2 {
   width: 16px;
   height: 16px;
+  position: absolute;
+}
+
+.checkbox-label {
+  left: 200px;
+}
+
+.checkbox-label2 {
   padding-left: 50px;
 }
 
@@ -205,7 +211,6 @@
   display: block;
   width: 16px;
   height: 16px;
-  background-color: #888;
   position: absolute;
   left: 0;
 }
@@ -214,7 +219,6 @@ input[type=checkbox]:checked ~ .checkbox-label-wrapper .checkbox-label::after {
   border-color: #00f;
   width: 16px;
   height: 16px;
-  transition: height 0.25s ease-out, width 0.25s ease-out 0.25s;
 }
 
 .input:focus ~ .checkbox-label-wrapper .checkbox-label::before {
@@ -230,19 +234,6 @@ input[type=checkbox]:checked ~ .checkbox-label-wrapper .checkbox-label::after {
   background-color: red;
 }
 
-.visually-hidden2 {
-  position: absolute;
-  overflow: hidden;
-  clip: rect(0 0 0 0);
-  height: 0px;
-  width: 0px;
-  margin: -1px;
-  padding: 0;
-  border: 0;
-  top: 50px;
-  left: 18px;
-}
-
 .checkbox-label-wrapper2 {
   width: 16px;
   height: 16px;
@@ -256,18 +247,11 @@ input[type=checkbox]:checked ~ .checkbox-label-wrapper .checkbox-label::after {
   text-decoration: underline;
 }
 
-.checkbox-label2 {
-  position: absolute;
-  width: 16px;
-  height: 16px;
-  padding-left: 50px;
-}
-
 .checkbox-label2::before {
   content: 'Show More';
   display: block;
   width: 260px;
-  height: 40px;
+  height: 30px;
   padding-top: 10px;
   cursor: pointer;
   text-align: center;
@@ -276,15 +260,14 @@ input[type=checkbox]:checked ~ .checkbox-label-wrapper .checkbox-label::after {
   background-color: #E5E5E5FF;
   color: #4F4F4FFF;
   position: absolute;
-  top: 310px;
+  top: 320px;
   left: -61px;
 }
 
-input[type=checkbox]:checked ~ .checkbox-label-wrapper2 .checkbox-label2::after {
+.check:checked ~ .checkbox-label-wrapper2 .checkbox-label2::after {
   border-color: #00f;
   width: 16px;
   height: 16px;
-  transition: height 0.25s ease-out, width 0.25s ease-out 0.25s;
 }
 
 .check-show-more:checked ~ .checkbox-label-wrapper2 .checkbox-label2::before {
