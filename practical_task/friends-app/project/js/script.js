@@ -114,6 +114,7 @@ const sortByNameAge = ({ target }) => {
         targetNameAge = target;
         target.checked = true;
 
+
         let allUsers = [...document.querySelectorAll("div.user")];
         let sortedUsers;
 

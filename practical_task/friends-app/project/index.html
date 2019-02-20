@@ -6,38 +6,49 @@
     <title>Friend-App</title>
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="images/game-controller.png">
+    <script defer src="https://use.fontawesome.com/releases/v5.7.2/js/all.js" integrity="sha384-0pzryjIRos8mFBWMzSSZApWtPl/5++eIfzYmTgBBmXYdhvxPc+XcFEk+zJwDgWbP" crossorigin="anonymous"></script>
     <script src="js/script.js" defer></script>
 </head>
 
 <body>
+    <header class="header">
+        <span class="logo">Friend Land</span>
+        <div id="wrap">
+            <form action="" autocomplete="on">
+                <input class="search-by-name" id="search" name="search" type="text" placeholder="What're we looking for ?"><input id="search_submit" value="Rechercher" type="submit">
+            </form>
+        </div>
+    </header>
     <div class="container">
         <div class="menu">
-            <span>By Age:</span>
-            <input class="age-up" type="radio" name="age">
-            <input class="age-down" type="radio" name="age">
-            <hr>
-            <span>By Name:</span>
-            <input class="name-up" type="radio" name="name">
-            <input class="name-down" type="radio" name="name">
-            <hr>
-            <label>
+            <br>
+            <br>
+            <br>
+            <input class="age-up" type="radio" data-icon="" name="age">
+            <input class="age-down" type="radio" data-icon="" name="age">
+            <br>
+            <br>
+            <input class="name-up" type="radio" data-icon='' name="name">
+            <input class="name-down" type="radio" data-icon='' name="name">
+            <br>
+            <br>
+<!--             <span class="input shadow">
+                <input type="text" class="search-by-name" name="text" placeholder="Gradient border focus fun">
+                <span class="shadow"></span>
+            </span> -->
+            <!--             <label>
                 <input class="search-by-name" type="text" name="text" placeholder="Search by name">
-            </label>
-            <hr>
-            <label>
-                <input class="male" type="radio" value="male" name="gender">
-                <span>Male</span>
-            </label>
-            <label>
-                <input class="female" type="radio" value="female" name="gender">
-                <span>Female</span>
-            </label>
-            <label>
-                <input class="user all" type="radio" value="all" name="gender" checked="checked">
-                <span>All</span>
-            </label>
-            <hr>
-            <button class="reset">Reset</button>
+            </label> -->
+            <input class="male" type="radio" value="male" data-icon='' name="gender">
+            <br>
+            <br>
+            <input class="female" type="radio" value="female" data-icon='' name="gender">
+            <br>
+            <br>
+            <input class="user all" type="radio" value="all" data-icon=' ' name="gender" checked="checked">
+            <br>
+            <br>
+            <button class="reset bttn">RESET</button>
         </div>
     </div>
 </body>
