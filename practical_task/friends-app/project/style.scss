@@ -1,0 +1,91 @@
+body {
+	padding: 0px;
+	margin: 0px;
+	background-color: #EEEEEEFF;
+	color: #2e3e48;
+    font-family: Graphik Meetup,-apple-system,BlinkMacSystemFont,Roboto,Helvetica,Arial,sans-serif;
+	font-size: 14px;
+
+}
+
+// .header {
+// 	padding: 40px;
+// 	font-size: 50px;
+// 	font-weight: bold;
+// 	width: 94%;
+// 	height: 100px;
+// 	color: #5F5F5FFF;
+// 	background-color: #BBC;
+// }
+
+input {
+	cursor: pointer;
+}
+
+@-webkit-keyframes scaleme {
+  0% { opacity: 1; }
+  0.1%, 100% {opacity: 0;display:none; }
+}
+
+div.user.hide {
+	// -webkit-animation:scaleme 1s;
+	transition: all ease .5s;
+	transform: scale(0);
+	display: none;
+	// position: fixed;
+	// top: -300px;
+}
+
+span {
+	display: block;
+}
+
+.photo {
+	transform: scale(1.2);
+	border-radius: 50%;
+	margin-bottom: 50px;
+}
+
+.container {
+	display: flex;
+}
+
+.fullName {
+	color: black;
+	font-weight: bold;
+	font-size: 15px;
+}
+
+
+div.user {
+	cursor: pointer;
+	text-align: center;
+	width: 220px;
+	height: 250px;
+	margin: 10px;
+	background-color: white;
+	padding-top: 30px;
+	border-radius: 20px;	
+	transition: all .3s cubic-bezier(.4,0,.2,1),transform .3s cubic-bezier(.4,0,.2,1);
+
+}
+
+div.user:hover {
+	margin-top: 5px;
+	box-shadow: 0px 4px 17px -5px black;
+}
+
+.users-container {
+	overflow: hidden;
+	display: grid;
+	position: relative;
+	margin-left: auto;
+	margin-right: auto;
+	width: 1000px;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.menu {
+	background-color: white;
+}
+
