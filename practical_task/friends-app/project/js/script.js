@@ -1,7 +1,7 @@
 "use strict";
 
 const getUsers = () => {
-    const url = new URL("https://randomuser.me/api/?results=50");
+    const url = new URL("https://randomuser.me/api/?results=30");
     let xhr = new XMLHttpRequest();
 
     xhr.open('GET', url, false);
@@ -169,8 +169,4 @@ menu.addEventListener("click", sortByNameAge);
 
 searchByNameInput.addEventListener("keydown", searchByName);
 
-let search = document.getElementById("search_submit");
-
-search.onclick = function () {
-    return false;
-};
+document.getElementById("search_submit").onclick = () => false;

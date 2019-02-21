@@ -499,6 +499,10 @@ input[type="submit"]:hover {
 		top: 150px;
 	}
 
+	div.user {
+		width: 210px;
+	}
+
 	.users-container {
         display: flex;
         position: relative;
@@ -510,7 +514,7 @@ input[type="submit"]:hover {
    	.burger:checked ~ .users-container {
         display: flex;
         position: relative;
-        left: -10px;
+        margin-left: 10px;
         width: 500px;
         flex-wrap: wrap;
         
@@ -527,6 +531,31 @@ input[type="submit"]:hover {
     }
 
    	#wrap {
+   		left: 20px;
    		top: 80px;
    	}
+}
+
+@media screen and (max-width: 530px) {
+
+	div.user {
+		width: 100%;
+	}
+
+	.users-container {
+        display: flex;
+        position: relative;
+        left: 40px;
+        width: 300px;
+        flex-wrap: wrap;
+   	 }
+
+   	.burger:checked ~ .users-container {
+        display: flex;
+        position: relative;
+        margin-left: 10px;
+        width: 240px;
+        flex-wrap: wrap;
+        
+   	 }
 }
