@@ -169,3 +169,8 @@ menu.addEventListener("click", sortByNameAge);
 
 searchByNameInput.addEventListener("keydown", searchByName);
 
+let search = document.getElementById("search_submit");
+
+search.onclick = function () {
+    return false;
+};

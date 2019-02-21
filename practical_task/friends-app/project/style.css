@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css");
 @import 'https://fonts.googleapis.com/css?family=Source+Sans+Pro:700';
 @import url(https://fonts.googleapis.com/css?family=Lato:100,300,400,700);
@@ -9,6 +10,10 @@ body {
   color: #2e3e48;
   font-family: Graphik Meetup, -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif;
   font-size: 14px;
+}
+
+::-webkit-scrollbar {
+  display: none;
 }
 
 .logo {
@@ -96,9 +101,10 @@ div.user:hover {
 
 .menu {
   min-height: 400px;
-  width: 200px;
+  max-width: 200px;
+  min-width: 160px;
   text-align: center;
-  background-color: #FFF;
+  background-color: #99909222;
 }
 
 input[type="radio"] {
@@ -273,6 +279,86 @@ input[type="submit"] {
   transition: opacity .4s ease;
 }
 
+.burger {
+  display: none;
+}
+
+.burger:checked ~ .menu {
+  margin-left: 0px;
+}
+
+.burger {
+  position: absolute;
+  width: 0px;
+  height: 30px;
+  top: 100px;
+  left: 15px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -o-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  outline: none;
+}
+
+.burger:after {
+  font-family: 'FontAwesome';
+  display: inline-block;
+  text-align: center;
+  font-size: 30px;
+  content: attr(data-icon);
+  border-radius: 5px;
+  color: rgba(0, 0, 0, 0.4);
+  transition: all ease .5s;
+}
+
+.burger:checked:after {
+  content: "";
+  color: rgba(0, 0, 0, 0.8);
+}
+
+.burger:focus:after {
+  transition: 0.5s all ease;
+  left: 0;
+  right: 0;
+  opacity: 1;
+}
+
 input[type="submit"]:hover {
   opacity: 0.8;
+}
+
+@media screen and (max-width: 1350px) and (min-width: 1110px) {
+  .menu {
+    transition: all ease .5s;
+    margin-left: -240px;
+  }
+  .burger {
+    display: flex;
+  }
+  input[type="text"]:focus {
+    width: 600px;
+  }
+}
+
+@media screen and (max-width: 1110px) {
+  .menu {
+    transition: all ease .5s;
+    margin-left: -240px;
+  }
+  .burger {
+    display: flex;
+  }
+  #wrap {
+    display: none;
+  }
+  .users-container {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    width: 900px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
 }
