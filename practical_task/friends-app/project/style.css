@@ -94,6 +94,7 @@ div.user:hover {
   display: grid;
   position: relative;
   margin-left: auto;
+  left: 40px;
   margin-right: auto;
   width: 1000px;
   grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -341,7 +342,7 @@ input[type="submit"]:hover {
   }
 }
 
-@media screen and (max-width: 1110px) {
+@media screen and (max-width: 1110px) and (min-width: 1000px) {
   .menu {
     transition: all ease .5s;
     margin-left: -240px;
@@ -349,16 +350,123 @@ input[type="submit"]:hover {
   .burger {
     display: flex;
   }
-  #wrap {
-    display: none;
+  input[type="text"] {
+    width: 500px;
+  }
+  input[type="text"]:focus {
+    width: 500px;
+  }
+  .users-container {
+    display: grid;
+    position: relative;
+    width: 1000px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+  .burger:checked ~ .users-container {
+    display: grid;
+    position: relative;
+    left: -10px;
+    width: 700px;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .menu {
+    transition: all ease .5s;
+    margin-left: -240px;
+  }
+  input[type="text"] {
+    width: 400px;
+  }
+  input[type="text"]:focus {
+    width: 400px;
+  }
+  .users-container {
+    display: grid;
+    position: relative;
+    left: -10px;
+    width: 700px;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .burger {
+    display: flex;
+  }
+  .burger:checked ~ .users-container {
+    display: grid;
+    position: relative;
+    left: -10px;
+    width: 700px;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+@media screen and (max-width: 900px) and (min-width: 650px) {
+  .header {
+    width: 100%;
   }
   .users-container {
     display: flex;
-    flex-wrap: wrap;
     position: relative;
-    margin-left: auto;
-    margin-right: auto;
-    width: 900px;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    width: 720px;
+    flex-wrap: wrap;
+  }
+  div.user {
+    position: relative;
+    width: 210px;
+    left: 65px;
+  }
+  .burger:checked ~ .users-container {
+    display: flex;
+    position: relative;
+    left: -60px;
+    width: 700px;
+    flex-wrap: wrap;
+  }
+  input[type="text"] {
+    width: 100px;
+    background-color: #fff;
+  }
+  input[type="text"]:focus {
+    width: 200px;
+    background-color: #fff;
+  }
+  #search_submit:focus ~ input[type="text"] {
+    width: 10px;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .header {
+    width: 100%;
+    height: 150px;
+  }
+  .burger {
+    top: 150px;
+  }
+  .users-container {
+    display: flex;
+    position: relative;
+    left: 50px;
+    width: 500px;
+    flex-wrap: wrap;
+  }
+  .burger:checked ~ .users-container {
+    display: flex;
+    position: relative;
+    left: -10px;
+    width: 500px;
+    flex-wrap: wrap;
+  }
+  input[type="text"] {
+    width: 100px;
+    background-color: #fff;
+  }
+  input[type="text"]:focus {
+    width: 200px;
+    background-color: #fff;
+  }
+  #wrap {
+    top: 80px;
   }
 }
