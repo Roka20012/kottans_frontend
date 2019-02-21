@@ -80,6 +80,7 @@ practical-task
 [Demo](https://roka20012.github.io/pop-up-menu/)
 [Code base](https://github.com/Roka20012/kottans_frontend/tree/master/practical_task/html_css_popup_menu/project)
 
-
-
+## friends-app
+[Demo](https://roka20012.github.io/friends-app/)
+[Code base](https://github.com/Roka20012/kottans_frontend/tree/master/practical_task/html_css_popup_menu/project)
 
