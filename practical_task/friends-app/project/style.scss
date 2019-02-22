@@ -1,6 +1,5 @@
 $back: #EEEEEEFF;
 $head: #fff;
-$menu: #99909222;
 
 body {
     padding: 0px;
@@ -48,7 +47,6 @@ input {
 }
 
 div.user.hide {
-    // -webkit-animation:scaleme 1s;
     transition: all ease .5s;
     transform: scale(0);
     position: fixed;
@@ -104,14 +102,10 @@ div.user:hover {
     grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 
-
-
 .menu {
-    min-height: 400px;
     max-width: 200px;
     min-width: 160px;
     text-align: center;
-    background-color: $menu;
 }
 
 @import url('//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css');
@@ -182,7 +176,6 @@ $third:#4426a8;
         color: #FFF;
     }
 }
-
 
 .bttn {
     font-size: 18px;
