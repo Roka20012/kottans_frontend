@@ -312,7 +312,7 @@ input[type="submit"] {
 }
 
 .burger:checked:after {
-  content: "";
+  transform: rotate(90deg);
   color: rgba(0, 0, 0, 0.8);
 }
 
@@ -422,11 +422,13 @@ input[type="submit"]:hover {
     flex-wrap: wrap;
   }
   input[type="text"] {
-    width: 100px;
+  	font-size: 40px;
+  	height: 50px;
+    width: 200px;
     background-color: #fff;
   }
   input[type="text"]:focus {
-    width: 200px;
+    width: 400px;
     background-color: #fff;
   }
   #search_submit:focus ~ input[type="text"] {
@@ -440,7 +442,7 @@ input[type="submit"]:hover {
     height: 150px;
   }
   .burger {
-    top: 150px;
+    top: 140px;
   }
   div.user {
     width: 210px;
@@ -460,11 +462,13 @@ input[type="submit"]:hover {
     flex-wrap: wrap;
   }
   input[type="text"] {
-    width: 100px;
+  	width: 300px;
+    font-size: 35px;
+  	height: 50px;
     background-color: #fff;
   }
   input[type="text"]:focus {
-    width: 200px;
+    width: 350px;
     background-color: #fff;
   }
   #wrap {
