@@ -4,6 +4,7 @@ html(lang="en")
 		meta(charset="UTF-8")
 		title HTML 5 FORM
 		link(rel="stylesheet", href="style.css")
+		link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Nunito+Sans")
 	body
 		.container
 			.header
@@ -36,10 +37,133 @@ html(lang="en")
 						p.help-center-text If you need assistance while placing your order, contact one of our beloved Project Manager by phone or email
 						a.help-center-phone +971(0) 555 555
 						a.help-center-email help@qtest.com
-				.form-body
-					p.form-body-logo SELECT WHAT YOU WANT TO TRANSLATE
-					.select-document
-						.website
-						.documents
-						.social-account
+				.form-body-logo SELECT WHAT YOU WANT TO TRANSLATE
+				.select-document
+					label.custom-radio
+						input(name="test" value="1" type="radio")
+						div.website
+							img(src="images/img_1.png")
+							span Website
+					label.custom-radio
+						input(name="test" value="2" type="radio" checked="checked")
+						div.documents
+							img(src="images/img_2.png")
+							span Documents
+					label.custom-radio
+						input(name="test" value="3" type="radio")
+						div.social-account
+							img(src="images/img_3.png")
+							span Social Account
+				.upload-documents
+					p Upload your documents
+					span (Doc, Docx, Text, PDF, Markdown)
+					label.upload-file
+						input(type="file")
+						div
+							p.text Upload a new file
+					table.files
+						tr
+							td FILE NAME 
+							td FILE SIZE
+							td NUMBER OF WORDS
+							td REMOVE
+						tr
+							td business_operations.docx
+							td 78kb
+							td 842
+							td trash icon
+						tr
+							td business_financial.docx
+							td 26kb
+							td 2,326
+							td trash icon
+				.laguages-paitings
+					p Choose your languages pairings
+					span.from-text FROM
+					select.from(name="from")
+						option(value="english" selected) English
+						option(value="arabic") Arabic
+						option(value="kurgdish") Ukraine
+					span.to-1-text TO
+					select.to-1(name="to")
+						option(value="english") English
+						option(value="arabic" selected) Arabic
+						option(value="kurgdish") Ukraine
+					select.to-2(name="to")
+						option(value="english") English
+						option(value="arabic") Arabic
+						option(value="kurgdish" selected) Ukraine
+					button.delete
+					button.add ADD
+				.select-tone
+					p Select your desired tone
+					label.custom-radio-2
+						input(name="test" value="1" type="radio")
+						div.casual
+							span Friendly / Casual
+					label.custom-radio-2
+						input(name="test" value="2" type="radio" checked="checked")
+						div.pro
+							span Corporate / Pro
+					label.custom-radio-2
+						input(name="test" value="3" type="radio")
+						div.formal
+							span Media / Formal
+				.urgent
+					p Tell us how urgent this job is
+					input.time(type="range" min="0" max="20" value="10" step="10")
+					span.got-time I GOT TIME
+					span.average AVERAGE
+					span.yesterday YESTERDAY
+					.timeline-info
+						span.header-timeline-info TIMELINE INFO
+						p.text-timeline-info With an <span>AVERAGE</span> timeline set up, our expert translator can take a reasonable amount of time perfecting your translation
+				.payment-method
+					p.payment-method-text Sign up and choose a payment method
+					p.have-account Already have an account with us? <a href="#">Sign in</a>
+					label.full-name
+						span FULL NAME
+						input.information(type="text" name="fullname" placeholder="Yarik Bachok Potik")
+					label.email
+						span EMAIL ADRESS
+						input.information(type="email" name="email" placeholder="yarik@bachok.potik")
+					label.password
+						span CHOOSE A PASSWORD
+						input.information(type="password" name="password" palceholder="********")
+			//- 		.select-card
+			//- 			label.custom-radio-3
+			//- 				input(name="test" value="1" type="radio")
+			//- 				div.visa-mastercard
+			//- 					img(src="images/visa.png")
+			//- 			label.custom-radio-3
+			//- 				input(name="test" value="2" type="radio" checked="checked")
+			//- 				div.pay-pal
+			//- 					img(src="images/paypal.png")
+			//- 			label.custom-radio-3
+			//- 				input(name="test" value="3" type="radio")
+			//- 				div.amazon
+			//- 					img(src="images/amazone.png")
+			//- 		span CARD NUMBER <input type="number" name="card-nubmer">
+			//- 		span EXPIRY DATE <input type="date" name="expiry-date">
+			//- 		span CODE <input type="code" name="code">
+			//- 	input(type="checkbox")
+			//- 	span.agree I agree to the <a href="#">Terms & Conditions<a>
+			//- 	button.place-order
+			//- 	button.print-a-quote
+			//- .footer
+			//- 	.what-we-do
+			//- 		span WHAT WE DO
+			//- 		p We provide a full range of laguage services including content development, document, website and social media accounts translations.
+			//- 	.our-main-office
+			//- 		span OUR MAIN OFFICE
+			//- 		span Dubal, UAE
+			//- 		span P.O Box: 502735
+			//- 		span Phone: +971(0) 44278128
+			//- 	.connect-with-us
+			//- 		span CONNECT WITH US
+			//- 		span Facebook
+			//- 		span Twitter
+			//- 		span Linkedin
+			//- 	img(src="", alt="footer-image")
+
 
