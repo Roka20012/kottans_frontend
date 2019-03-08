@@ -20,10 +20,10 @@ button:hover {
 }
 
 .container {
-  position: absolute;
+  position: relative;
   left: 7.72%;
   width: 84.6%;
-  height: 1000px;
+  height: 3099px;
   display: flex;
 }
 
@@ -830,7 +830,6 @@ input[type=range]:focus {
 
 .payment-method {
   position: absolute;
-  right: 0px;
   width: 100%;
   height: 750px;
   top: 1824px;
@@ -866,6 +865,7 @@ input[type=range]:focus {
   color: #6E768FFF;
   position: relative;
   top: 47px;
+  width: 312px;
   word-spacing: 1px;
   letter-spacing: .3px;
   left: 11.4%;
@@ -876,56 +876,41 @@ input[type=range]:focus {
 }
 
 .full-name {
-  position: relative;
-  top: 93px;
-  left: 4.8%;
-}
-
-.full-name span {
-  font-size: 12px;
-  top: -41px;
-  left: 7.55%;
+  color: #6E768FFF;
   word-spacing: 1px;
-  letter-spacing: .5px;
+  letter-spacing: .6px;
+  position: absolute;
+  font-size: 12px;
   font-weight: bold;
-  position: relative;
+  top: 192px;
+  left: 12.3%;
 }
 
 .email {
-  position: relative;
-  top: 197px;
-  left: -30.5%;
-}
-
-.email span {
-  font-size: 12px;
-  top: -41px;
-  left: 9.5%;
+  color: #6E768FFF;
   word-spacing: 1px;
-  letter-spacing: .5px;
+  letter-spacing: .6px;
+  font-size: 12px;
   font-weight: bold;
-  position: relative;
+  position: absolute;
+  top: 296px;
+  left: 12.3%;
 }
 
 .password {
-  position: relative;
-  top: 129px;
-  left: 40.6%;
-}
-
-.password span {
-  font-size: 12px;
-  top: 27px;
-  left: -67.60%;
+  color: #6E768FFF;
   word-spacing: 1px;
   letter-spacing: .5px;
+  font-size: 12px;
   font-weight: bold;
-  position: relative;
+  position: absolute;
+  top: 296px;
+  left: 41.5%;
 }
 
 .information {
   margin-bottom: 20px;
-  width: 26.35%;
+  width: 300px;
   height: 48px;
   padding: 5px;
   box-sizing: border-box;
@@ -936,21 +921,388 @@ input[type=range]:focus {
   background-color: transparent;
 }
 
+.data-full-name {
+  position: absolute;
+  top: 215px;
+  left: 11.4%;
+}
+
+.data-email {
+  position: absolute;
+  top: 319px;
+  left: 11.4%;
+}
+
+.data-password {
+  position: absolute;
+  top: 319px;
+  left: 40.6%;
+}
+
+.information,
+.card {
+  transition: all ease .2s;
+}
+
 .information::-webkit-input-placeholder {
   font-size: 15px;
 }
 
-.information:focus {
-  border-color: red;
+.information:focus,
+.card:focus {
+  border-color: #76A7E1FF;
+}
+
+.information:hover,
+.card:hover {
+  cursor: pointer;
+  box-shadow: 10px 10px 40px -20px black;
+}
+
+.information + label:before {
+  position: absolute;
+  content: "";
+  top: 36px;
+  left: 256px;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: #E17776FF;
+}
+
+.information + label:after {
+  position: absolute;
+  content: "";
+  top: 43px;
+  left: 263px;
+  width: 10px;
+  height: 10px;
+  background-color: #fff;
+  -webkit-clip-path: polygon(20% 0%, 0% 20%, 30% 50%, 0% 80%, 20% 100%, 50% 70%, 80% 100%, 100% 80%, 70% 50%, 100% 20%, 80% 0%, 50% 30%);
+  clip-path: polygon(20% 0%, 0% 20%, 30% 50%, 0% 80%, 20% 100%, 50% 70%, 80% 100%, 100% 80%, 70% 50%, 100% 20%, 80% 0%, 50% 30%);
+}
+
+.information:valid + label:before {
+  position: absolute;
+  content: "";
+  top: 36px;
+  left: 256px;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: #76A7E1FF;
+}
+
+.information:valid + label:after {
+  transform: rotate(35deg);
+  position: absolute;
+  content: "";
+  top: 41px;
+  left: 264px;
+  width: 5px;
+  height: 8px;
+  -webkit-clip-path: none;
+  clip-path: none;
+  background-color: #76A7E1FF;
+  border-bottom: 3px solid #fff;
+  border-right: 3px solid #fff;
+}
+
+.select-card {
+  position: absolute;
+  left: 11.45%;
+  top: 434px;
+  width: 63.6%;
+  height: 100px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+label.custom-radio-3 input {
+  display: none;
+}
+
+label.custom-radio-3 input + div {
+  transition: all ease .2s;
+  cursor: pointer;
+  text-align: center;
+  background-color: #F7F7FAFF;
+  border: 1px solid #D7D9E0FF;
+  border-radius: 4px;
+  width: 218px;
+  height: 98px;
+}
+
+label.custom-radio-3 input + div img {
+  position: relative;
+  top: 40px;
+}
+
+label.custom-radio-3 input + div:hover {
+  border: 1px solid #76A7E1FF;
+}
+
+label.custom-radio-3 input:checked + div {
+  box-shadow: inset 0px 0px 0px 5px #76A7E1FF;
+  border: 1px solid #76A7E1FF;
+  position: relative;
+}
+
+label.custom-radio-3 input:checked + div:before {
+  position: absolute;
+  content: "";
+  top: -11px;
+  margin-left: 136px;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: #76A7E1FF;
+}
+
+label.custom-radio-3 input:checked + div.visa-mastercard:after, label.custom-radio-3 input:checked + div.pay-pal:after {
+  transform: rotate(35deg);
+  position: absolute;
+  content: "";
+  top: -5px;
+  left: 207px;
+  width: 8px;
+  height: 12px;
+  border-bottom: 4px solid #fff;
+  border-right: 4px solid #fff;
+}
+
+label.custom-radio-3 input:checked + div.amazon:after {
+  transform: rotate(35deg);
+  position: absolute;
+  content: "";
+  top: -5px;
+  left: 204px;
+  width: 8px;
+  height: 12px;
+  border-bottom: 4px solid #fff;
+  border-right: 4px solid #fff;
+}
+
+.data-card-number {
+  background: url(images/visa_bg.png) no-repeat;
+  background-position: 96.5% 50%;
+  position: absolute;
+  top: 633px;
+  left: 11.4%;
+  width: 380px;
+}
+
+.data-expiry-date {
+  position: absolute;
+  top: 633px;
+  width: 171px;
+  left: 47.5%;
+}
+
+.data-card-code {
+  position: absolute;
+  top: 633px;
+  width: 105px;
+  left: 65.3%;
+}
+
+.card-number {
+  color: #6E768FFF;
+  word-spacing: 1px;
+  letter-spacing: .6px;
+  font-size: 12px;
+  font-weight: bold;
+  position: absolute;
+  top: 610px;
+  left: 12.3%;
+}
+
+.expiry-date {
+  color: #6E768FFF;
+  word-spacing: 1px;
+  letter-spacing: .6px;
+  font-size: 12px;
+  font-weight: bold;
+  position: absolute;
+  top: 610px;
+  left: 48.2%;
+}
+
+.card-code {
+  color: #6E768FFF;
+  word-spacing: 1px;
+  letter-spacing: .6px;
+  font-size: 12px;
+  font-weight: bold;
+  position: absolute;
+  top: 610px;
+  left: 65.8%;
+}
+
+.card {
+  margin-bottom: 20px;
+  height: 48px;
+  padding: 5px;
+  box-sizing: border-box;
+  border-radius: 4px;
+  border: 1px solid #6E768FFF;
+  font-size: 15px;
+  outline: transparent;
   background-color: transparent;
 }
 
-.information:focus:valid {
-  border-color: green;
+.card::-webkit-input-placeholder {
+  font-size: 15px;
 }
 
-.information:focus:invalid {
-  border-color: #f00;
-  box-shadow: 0px 0px 10px 1px blue;
-  background: transparent;
+.agree,
+.agree-checkbox {
+  color: #6E768FFF;
+  font-size: 12px;
+  position: absolute;
+  top: 2631px;
+  left: 38.5%;
+}
+
+.agree-checkbox {
+  left: 35.6%;
+}
+
+.place-order-footer {
+  text-indent: 4px;
+  position: absolute;
+  left: 57.7%;
+  top: 2614px;
+}
+
+.print-a-quote-footer {
+  text-indent: 0px;
+  position: absolute;
+  width: 173px;
+  left: 75.2%;
+  top: 2614px;
+}
+
+footer {
+  width: 100%;
+  background-color: #384764FF;
+}
+
+.footer {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  justify-items: center;
+  grid-start: 1;
+  height: 250px;
+  width: 95%;
+  color: #C6CCEAFF;
+}
+
+.what-we-do {
+  margin-left: 30px;
+  padding-top: 50px;
+  padding-left: 116px;
+}
+
+.what-we-do h6 {
+  font-weight: bold;
+  font-size: 10px;
+  letter-spacing: 1.7px;
+  word-spacing: 0px;
+}
+
+.what-we-do:before {
+  position: relative;
+  content: url(images/heart.png);
+  top: 44px;
+  left: -18.5%;
+  width: 21px;
+  height: 19px;
+}
+
+.what-we-do p {
+  position: relative;
+  top: -6px;
+  text-indent: -1px;
+  font-weight: normal;
+  font-style: italic;
+  width: 220px;
+  font-size: 12px;
+}
+
+.our-main-office {
+  margin-left: 30px;
+  padding-top: 48px;
+  padding-left: 85px;
+}
+
+.our-main-office:before {
+  position: relative;
+  content: url(images/compas.png);
+  top: 47px;
+  left: -31%;
+  width: 21px;
+  height: 21px;
+}
+
+.our-main-office h6 {
+  font-weight: bold;
+  font-size: 10px;
+  letter-spacing: 2px;
+  word-spacing: 1px;
+}
+
+.our-main-office p {
+  position: relative;
+  line-height: 13px;
+  top: -6px;
+  left: 2px;
+  word-spacing: 1px;
+  text-indent: -1px;
+  font-weight: normal;
+  font-size: 11px;
+}
+
+.our-main-office a {
+  font-size: 11px;
+  color: #C6CCEAFF;
+  text-decoration: none;
+}
+
+.connect-with-us {
+  padding-top: 50px;
+  padding-left: 190px;
+  margin-left: 30px;
+}
+
+.connect-with-us:before {
+  position: relative;
+  content: url(images/link.png);
+  top: 39px;
+  left: -20%;
+  width: 20px;
+  height: 22px;
+}
+
+.connect-with-us h6 {
+  font-weight: bold;
+  font-size: 10px;
+  letter-spacing: 2px;
+  word-spacing: 1px;
+}
+
+.connect-with-us p {
+  line-height: 13px;
+  word-spacing: 1px;
+  text-indent: -1px;
+  font-weight: normal;
+  font-size: 11px;
+}
+
+.connect-with-us a {
+  font-size: 11px;
+  color: #C6CCEAFF;
+  text-decoration: none;
 }

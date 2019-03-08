@@ -33,15 +33,15 @@
         <div class="form-body-logo">SELECT WHAT YOU WANT TO TRANSLATE</div>
         <div class="select-document">
           <label class="custom-radio">
-            <input name="test" value="1" type="radio">
+            <input name="document" value="1" type="radio">
             <div class="website"><img src="images/img_1.png"><span>Website</span></div>
           </label>
           <label class="custom-radio">
-            <input name="test" value="2" type="radio" checked="checked">
+            <input name="document" value="2" type="radio" checked>
             <div class="documents"><img src="images/img_2.png"><span>Documents</span></div>
           </label>
           <label class="custom-radio">
-            <input name="test" value="3" type="radio">
+            <input name="document" value="3" type="radio">
             <div class="social-account"><img src="images/img_3.png"><span>Social Account</span></div>
           </label>
         </div>
@@ -97,15 +97,15 @@
         <div class="select-tone">
           <p>Select your desired tone</p>
           <label class="custom-radio-2">
-            <input name="test" value="1" type="radio">
+            <input name="tone" value="1" type="radio">
             <div class="casual"><span>Friendly / Casual</span></div>
           </label>
           <label class="custom-radio-2">
-            <input name="test" value="2" type="radio" checked="checked">
+            <input name="tone" value="2" type="radio" checked="checked">
             <div class="pro"><span>Corporate / Pro</span></div>
           </label>
           <label class="custom-radio-2">
-            <input name="test" value="3" type="radio">
+            <input name="tone" value="3" type="radio">
             <div class="formal"><span>Media / Formal</span></div>
           </label>
         </div>
@@ -119,17 +119,59 @@
         <div class="payment-method">
           <p class="payment-method-text">Sign up and choose a payment method</p>
           <p class="have-account">Already have an account with us? <a href="#">Sign in</a></p>
-          <label class="full-name"><span>FULL NAME</span>
-            <input class="information" type="text" name="fullname" placeholder="Yarik Bachok Potik">
-          </label>
-          <label class="email"><span>EMAIL ADRESS</span>
-            <input class="information" type="email" name="email" placeholder="yarik@bachok.potik">
-          </label>
-          <label class="password"><span>CHOOSE A PASSWORD</span>
-            <input class="information" type="password" name="password" palceholder="********">
-          </label>
+          <input class="information data-full-name" id="data-name" required type="text" name="fullname" placeholder="Yarik Bachok Potik">
+          <label class="full-name" for="data-name">FULL NAME</label>
+          <input class="information data-email" id="data-email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+.[a-z]{2,4}$" title="yarik@bachok.com" type="email" name="email" placeholder="yarik@bachok.potik">
+          <label class="email" for="data-email">EMAIL ADRESS</label>
+          <input class="information data-password" id="data-password" required type="password" name="password" palceholder="********">
+          <label class="password" pattern="(?=^.{8,}$)((?=.*d)|(?=.*W+))(?![.
+])(?=.*[A-Z])(?=.*[a-z]).*" title="Minimum 8 characters, UPPERCASE, lowercase and Number" for="data-password">CHOOSE A PASSWORD</label>
+          <div class="select-card">
+            <label class="custom-radio-3">
+              <input name="card" value="1" type="radio" checked="checked">
+              <div class="visa-mastercard"><img src="images/visa.png"></div>
+            </label>
+            <label class="custom-radio-3">
+              <input name="card" value="2" type="radio">
+              <div class="pay-pal"><img src="images/paypal.png"></div>
+            </label>
+            <label class="custom-radio-3">
+              <input name="card" value="3" type="radio">
+              <div class="amazon"><img src="images/amazone.png"></div>
+            </label>
+          </div>
+          <input class="card data-card-number" id="card-number" type="code" name="card-nubmer">
+          <label class="card-number" for="card-number">CARD NUMBER</label>
+          <input class="card data-expiry-date" id="expiry-date" type="date" name="expiry-date">
+          <label class="expiry-date" for="expiry-date">EXPIRY DATE</label>
+          <input class="card data-card-code" id="card-code" type="code" name="code">
+          <label class="card-code" for="card-code">CODE</label>
         </div>
+        <label class="agree" for="agree-terms">I agree to the <a href="#">Terms & Conditions<a></label>
+        <input class="agree-checkbox" id="agree-terms" type="checkbox">
+        <button class="place-order-footer place-order">PLACE ORDER</button>
+        <button class="print-a-quote-footer print-a-quote">PRINT A QUOTE</button>
       </div>
     </div>
+    <footer>
+      <div class="footer">
+        <div class="what-we-do">
+          <h6>WHAT WE DO</h6>
+          <p>We provide a full range of laguage services including content development, document, website and social media accounts translations.</p>
+        </div>
+        <div class="our-main-office">
+          <h6>OUR MAIN OFFICE</h6>
+          <p>Dubal, UAE</p>
+          <p>P.O Box: 502735</p>
+          <p>Phone: <a href="tel:+971(0)44278128">+971(0)44278128</a></p>
+        </div>
+        <div class="connect-with-us">
+          <h6>CONNECT WITH US</h6>
+          <p class="facebook">Facebook</p>
+          <p class="twitter">Twitter</p>
+          <p class="linkedin">Linkedin</p>
+        </div><img class="logo_footer" src="images/logo_footer.png" alt="footer-image">
+      </div>
+    </footer>
   </body>
 </html>

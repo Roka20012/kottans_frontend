@@ -40,17 +40,17 @@ html(lang="en")
 				.form-body-logo SELECT WHAT YOU WANT TO TRANSLATE
 				.select-document
 					label.custom-radio
-						input(name="test" value="1" type="radio")
+						input(name="document" value="1" type="radio")
 						div.website
 							img(src="images/img_1.png")
 							span Website
 					label.custom-radio
-						input(name="test" value="2" type="radio" checked="checked")
+						input(name="document" value="2" type="radio" checked)
 						div.documents
 							img(src="images/img_2.png")
 							span Documents
 					label.custom-radio
-						input(name="test" value="3" type="radio")
+						input(name="document" value="3" type="radio")
 						div.social-account
 							img(src="images/img_3.png")
 							span Social Account
@@ -98,15 +98,15 @@ html(lang="en")
 				.select-tone
 					p Select your desired tone
 					label.custom-radio-2
-						input(name="test" value="1" type="radio")
+						input(name="tone" value="1" type="radio")
 						div.casual
 							span Friendly / Casual
 					label.custom-radio-2
-						input(name="test" value="2" type="radio" checked="checked")
+						input(name="tone" value="2" type="radio" checked="checked")
 						div.pro
 							span Corporate / Pro
 					label.custom-radio-2
-						input(name="test" value="3" type="radio")
+						input(name="tone" value="3" type="radio")
 						div.formal
 							span Media / Formal
 				.urgent
@@ -121,49 +121,51 @@ html(lang="en")
 				.payment-method
 					p.payment-method-text Sign up and choose a payment method
 					p.have-account Already have an account with us? <a href="#">Sign in</a>
-					label.full-name
-						span FULL NAME
-						input.information(type="text" name="fullname" placeholder="Yarik Bachok Potik")
-					label.email
-						span EMAIL ADRESS
-						input.information(type="email" name="email" placeholder="yarik@bachok.potik")
-					label.password
-						span CHOOSE A PASSWORD
-						input.information(type="password" name="password" palceholder="********")
-			//- 		.select-card
-			//- 			label.custom-radio-3
-			//- 				input(name="test" value="1" type="radio")
-			//- 				div.visa-mastercard
-			//- 					img(src="images/visa.png")
-			//- 			label.custom-radio-3
-			//- 				input(name="test" value="2" type="radio" checked="checked")
-			//- 				div.pay-pal
-			//- 					img(src="images/paypal.png")
-			//- 			label.custom-radio-3
-			//- 				input(name="test" value="3" type="radio")
-			//- 				div.amazon
-			//- 					img(src="images/amazone.png")
-			//- 		span CARD NUMBER <input type="number" name="card-nubmer">
-			//- 		span EXPIRY DATE <input type="date" name="expiry-date">
-			//- 		span CODE <input type="code" name="code">
-			//- 	input(type="checkbox")
-			//- 	span.agree I agree to the <a href="#">Terms & Conditions<a>
-			//- 	button.place-order
-			//- 	button.print-a-quote
-			//- .footer
-			//- 	.what-we-do
-			//- 		span WHAT WE DO
-			//- 		p We provide a full range of laguage services including content development, document, website and social media accounts translations.
-			//- 	.our-main-office
-			//- 		span OUR MAIN OFFICE
-			//- 		span Dubal, UAE
-			//- 		span P.O Box: 502735
-			//- 		span Phone: +971(0) 44278128
-			//- 	.connect-with-us
-			//- 		span CONNECT WITH US
-			//- 		span Facebook
-			//- 		span Twitter
-			//- 		span Linkedin
-			//- 	img(src="", alt="footer-image")
+					input#data-name.information.data-full-name(required type="text" name="fullname" placeholder="Yarik Bachok Potik")
+					label.full-name(for="data-name") FULL NAME
+					input#data-email.information.data-email(required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+title="yarik@bachok.com" type="email" name="email" placeholder="yarik@bachok.potik")
+					label.email(for="data-email") EMAIL ADRESS
+					input#data-password.information.data-password(required  type="password" name="password" palceholder="********" )
+					label.password(pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*" title="Minimum 8 characters, UPPERCASE, lowercase and Number" for="data-password") CHOOSE A PASSWORD
+					.select-card
+						label.custom-radio-3
+							input(name="card" value="1" type="radio" checked="checked")
+							div.visa-mastercard
+								img(src="images/visa.png")
+						label.custom-radio-3
+							input(name="card" value="2" type="radio")
+							div.pay-pal
+								img(src="images/paypal.png")
+						label.custom-radio-3
+							input(name="card" value="3" type="radio")
+							div.amazon
+								img(src="images/amazone.png")
+					input#card-number.card.data-card-number(type="code" name="card-nubmer")
+					label.card-number(for="card-number") CARD NUMBER
+					input#expiry-date.card.data-expiry-date(type="date" name="expiry-date")
+					label.expiry-date(for="expiry-date") EXPIRY DATE
+					input#card-code.card.data-card-code(type="code" name="code")
+					label.card-code(for="card-code") CODE
+				label.agree(for="agree-terms") I agree to the <a href="#">Terms & Conditions<a>
+				input.agree-checkbox#agree-terms(type="checkbox")
+				button.place-order-footer.place-order PLACE ORDER
+				button.print-a-quote-footer.print-a-quote PRINT A QUOTE
+		footer
+			.footer
+				.what-we-do
+					h6 WHAT WE DO
+					p We provide a full range of laguage services including content development, document, website and social media accounts translations.
+				.our-main-office
+					h6 OUR MAIN OFFICE
+					p Dubal, UAE
+					p P.O Box: 502735
+					p Phone: <a href="tel:+971(0)44278128">+971(0)44278128</a>
+				.connect-with-us
+					h6 CONNECT WITH US
+					p.facebook Facebook
+					p.twitter Twitter
+					p.linkedin Linkedin
+				img.logo_footer(src="images/logo_footer.png", alt="footer-image")
 
 
