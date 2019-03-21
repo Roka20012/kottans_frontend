@@ -1272,16 +1272,16 @@ footer {
 }
 
 .connect-with-us {
-  padding-top: 50px;
-  padding-left: 190px;
-  margin-left: 30px;
+  padding-top: 46px;
+  padding-left: 170px;
+  margin-left: 10px;
 }
 
 .connect-with-us:before {
   position: relative;
   content: url(images/link.png);
-  top: 39px;
-  left: -20%;
+  top: 47px;
+  left: -36%;
   width: 20px;
   height: 22px;
 }
@@ -1289,14 +1289,21 @@ footer {
 .connect-with-us h6 {
   font-weight: bold;
   font-size: 10px;
+  width: 126px;
+  position: relative;
+  left: -4px;
   letter-spacing: 2px;
   word-spacing: 1px;
 }
 
 .connect-with-us p {
-  line-height: 13px;
+  position: relative;
+  left: 25.5px;
+  top: -12px;
+  margin-top: -3px;
+  line-height: 0px;
   word-spacing: 1px;
-  text-indent: -1px;
+  text-indent: -16px;
   font-weight: normal;
   font-size: 11px;
 }
@@ -1305,4 +1312,35 @@ footer {
   font-size: 11px;
   color: #C6CCEAFF;
   text-decoration: none;
+}
+
+.facebook {
+  padding-top: 5px;
+}
+
+.facebook:before {
+  position: relative;
+  content: url(images/facebook.png);
+  top: 5px;
+  left: -14%;
+  width: 16px;
+  height: 16px;
+}
+
+.twitter:before {
+  position: relative;
+  content: url(images/twitter.png);
+  top: 5px;
+  left: -14%;
+  width: 16px;
+  height: 16px;
+}
+
+.linkedin:before {
+  position: relative;
+  content: url(images/linkedin.png);
+  top: 5px;
+  left: -14%;
+  width: 16px;
+  height: 16px;
 }
