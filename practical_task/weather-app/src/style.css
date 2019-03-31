@@ -1,0 +1,64 @@
+body {
+	margin-top: 20px;
+	padding: 0;
+}
+
+.search-city {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 20px;
+	height: 30px;
+	width: 20%;
+	min-width: 160px;
+}
+
+.weather-info {
+	display: flex;
+	margin-left: auto;
+	margin-right: auto;
+	width: 80%;
+	height: 350px;
+	border: 1px solid red;
+}
+
+.weather-info-day {
+	border: 1px solid orange;
+	width: 35%;
+	height: 100%;
+}
+
+.weather-info-expectation {
+	border: 1px solid yellow;
+	width: 30%;
+	height: 100%;
+}
+
+.weather-info-details {
+	border: 1px solid black;
+	width: 35%;
+	height: 100%;
+}
+
+.weather-panel {
+	margin-left: auto;
+	margin-right: auto;
+	display: flex;
+	justify-content: space-around;
+	width: 80%;
+	height: 250px;
+	border: 1px solid blue;
+}
+
+.day {
+	margin-top: 70px;
+	margin-left: auto;
+	margin-right: auto;
+	width: 12%;
+	height: 65%;
+	border: 1px solid green;
+}
+
+body {
+    color: #888;
+}
