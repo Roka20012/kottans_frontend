@@ -21,8 +21,9 @@ button:hover {
 
 .container {
   position: relative;
-  left: 7.72%;
-  width: 84.6%;
+  margin-right: auto;
+  margin-left: auto;
+  width: 1140px;
   height: 3099px;
   display: flex;
 }
@@ -386,10 +387,25 @@ label.custom-radio input:checked + div:after {
 .upload-documents span {
   position: relative;
   color: #9FA9B8FF;
-  top: -42px;
-  left: 393px;
+  top: -45px;
+  left: 405px;
   font-size: 13px;
   display: inline-block;
+}
+
+.trash-icon {
+  background: none;
+  border: none;
+}
+
+.fa-trash-alt {
+  transition: all ease .2s;
+  color: #a5abc5;
+}
+
+.trash-icon:hover .fa-trash-alt {
+  cursor: pointer;
+  color: #888;
 }
 
 .upload-file input {
@@ -458,7 +474,7 @@ label.custom-radio input:checked + div:after {
   top: 35px;
   font-size: 20px;
   font-weight: bold;
-  content: '1';
+  content: '2';
   width: 41px;
   height: 41px;
   border-radius: 50%;
@@ -581,7 +597,7 @@ span.to-1-text {
   top: 35px;
   font-size: 20px;
   font-weight: bold;
-  content: '1';
+  content: '3';
   width: 41px;
   height: 41px;
   border-radius: 50%;
@@ -692,7 +708,7 @@ label.custom-radio-2 input:checked + div:after {
   top: 35px;
   font-size: 20px;
   font-weight: bold;
-  content: '1';
+  content: '4';
   width: 41px;
   height: 41px;
   border-radius: 50%;
@@ -754,6 +770,7 @@ label.custom-radio-2 input:checked + div:after {
   font-weight: bold;
   color: #A5ABC5FF;
   top: 86px;
+  margin-left: 6px;
 }
 
 .got-time {
@@ -845,7 +862,7 @@ input[type=range]:focus {
   top: 37px;
   font-size: 20px;
   font-weight: bold;
-  content: '1';
+  content: '5';
   width: 41px;
   height: 41px;
   border-radius: 50%;
@@ -1185,7 +1202,10 @@ label.custom-radio-3 input:checked + div.amazon:after {
 }
 
 footer {
+  margin-left: auto;
+  margin-right: auto;
   width: 100%;
+  max-width: 1347.4px;
   background-color: #384764FF;
 }
 
@@ -1194,7 +1214,6 @@ footer {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   justify-items: center;
-  grid-start: 1;
   height: 250px;
   width: 95%;
   color: #C6CCEAFF;
